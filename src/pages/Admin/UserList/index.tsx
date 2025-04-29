@@ -1,10 +1,12 @@
-
+import { PageContainer } from "@ant-design/pro-components"
 
 const UserList: React.FC = () => {
     return (
-        <div>
-            <h1>UserList</h1>
-        </div>
+        <PageContainer title={false}>
+            <div>
+                <h1>UserList</h1>
+            </div>
+        </PageContainer>
     )
 }
 

@@ -32,7 +32,7 @@ export const requestConfig: RequestConfig = {
     // 请求拦截器
     requestInterceptors: [
         (config: RequestOptions) => {
-            console.log("Request: ", config.url)
+            // console.log("Request: ", config.url)
             const url = config.url?.concat('?token=123')
             return {...config, url}
         }

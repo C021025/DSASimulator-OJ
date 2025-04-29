@@ -151,11 +151,12 @@ export const QuestionConfigModal: React.FC<QuestionConfigModalProps> = ({ visibl
 
     // initialization
     useEffect(() => {
+        console.log(targetId)
         if (targetId > 0) {
             getQuestionVOByIdUsingGET({
                 id: targetId,
             }).then(res => {
-                if (res.code === 200) {
+                if (res.data) {
                     // console.log(res.data);
                     const questionVo: API.Question = res.data;
                     formInstance.current?.setFieldValue('title', questionVo.title);
